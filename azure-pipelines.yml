@@ -8,5 +8,6 @@ pool: Default
 variables: { agent.disablelogplugin.TestResultLogPlugin: 'false' }
 
 steps:
-- script: python SampleTests.py
-  displayName: 'python run unit tests'
+- script: 
+        docker build -t myimg2 .
+        docker run myimg2
