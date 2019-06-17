@@ -3,11 +3,14 @@
 trigger:
 - master
 
-pool: Default
+pool:
+  vmImageName: 'ubuntu-latest'
 
-variables: { agent.disablelogplugin.TestResultLogPlugin: 'false' }
+variables:
+  agent.disablelogplugin.TestResultLogPlugin: 'false'
+  skipComponentGovernanceDetection: 'true'
 
 steps:
 - script: |
-    docker build -t myimg2 .
-    docker run myimg2
+    docker build -t myimg3 .
+    docker run myimg3
