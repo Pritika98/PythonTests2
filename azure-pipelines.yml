@@ -4,7 +4,7 @@ trigger:
 - master
 
 pool:
-  vmImageName: 'ubuntu-latest'
+  vmImageName: 'Default'
 
 variables:
   agent.disablelogplugin.TestResultLogPlugin: 'false'
